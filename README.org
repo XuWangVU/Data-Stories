@@ -19,12 +19,12 @@ sudo npm install http-server -g
 * Creating a Data Story
 
 A minimal Data Story consists of 4 files: ~index.html~, ~query.rq~,
-and the dependencies ~[[https://raw.githubusercontent.com/wouterbeek/Data-Stories/master/deps/yasgui.min.css][yasgui.min.css]]~ and ~[[https://raw.githubusercontent.com/wouterbeek/Data-Stories/master/deps/yasgui.min.js][yasgui.min.js]]~.
+and the dependencies [[https://raw.githubusercontent.com/wouterbeek/Data-Stories/master/deps/yasgui.min.css][yasgui.min.css]] and [[https://raw.githubusercontent.com/wouterbeek/Data-Stories/master/deps/yasgui.min.js][yasgui.min.js]].
 
 ** Copy the dependencies
 
 Create a directory for your Data Story, and copy the two dependencies
-~[[https://raw.githubusercontent.com/wouterbeek/Data-Stories/master/deps/yasgui.min.css][yasgui.min.css]]~ and ~[[https://raw.githubusercontent.com/wouterbeek/Data-Stories/master/deps/yasgui.min.js][yasgui.min.js]]~ into that directory.
+[[https://raw.githubusercontent.com/wouterbeek/Data-Stories/master/deps/yasgui.min.css][yasgui.min.css]] and [[https://raw.githubusercontent.com/wouterbeek/Data-Stories/master/deps/yasgui.min.js][yasgui.min.js]] into that directory.
 
 ** Creating the HTML file
 
