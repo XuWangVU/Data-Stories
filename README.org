@@ -69,7 +69,7 @@ Start ~http-server~ in the directory that contains your Data Story:
 http-server .
 #+END_SRC
 
-Open http://localhost:3020 in a web browser to view and interact with
+Open [[http://localhost:8080]] in a web browser to view and interact with
 your Data Story.
 
 If all went well you will now see the following in your web browser:
