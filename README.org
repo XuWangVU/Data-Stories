@@ -18,13 +18,7 @@ sudo npm install http-server -g
 
 * Creating a Data Story
 
-A minimal Data Story consists of 4 files: ~index.html~, ~query.rq~,
-and the dependencies [[https://raw.githubusercontent.com/wouterbeek/Data-Stories/master/deps/yasgui.min.css][yasgui.min.css]] and [[https://raw.githubusercontent.com/wouterbeek/Data-Stories/master/deps/yasgui.min.js][yasgui.min.js]].
-
-** Copy the dependencies
-
-Create a directory for your Data Story, and copy the two dependencies
-[[https://raw.githubusercontent.com/wouterbeek/Data-Stories/master/deps/yasgui.min.css][yasgui.min.css]] and [[https://raw.githubusercontent.com/wouterbeek/Data-Stories/master/deps/yasgui.min.js][yasgui.min.js]] into that directory.
+A minimal Data Story consists of 2 files: ~index.html~ and ~query.rq~.
 
 ** Creating the HTML file
 
@@ -37,13 +31,13 @@ minimal HTML file looks as follows:
 <html>
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link href="yasgui.min.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdn.rawgit.com/wouterbeek/Data-Stories/master/deps/yasgui.min.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <h1 class="header">Example Data Story</h1>
     <p>This is where I tell my story.</p>
     <div data-query data-query-sparql="query.rq"></div>
-    <script src="yasgui.min.js?v=1"></script>
+    <script src="https://cdn.rawgit.com/wouterbeek/Data-Stories/master/deps/yasgui.min.js?v=1"></script>
     <script type="text/javascript">YASGUI.sparqlStories();</script>
   </body>
 </html>
