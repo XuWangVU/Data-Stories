@@ -1,0 +1,2 @@
+#+TITLE: A minimal Data Story
+#+AUTHOR: Wouter Beek

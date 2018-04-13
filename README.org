@@ -1,0 +1,80 @@
+#+TITLE: Data-Stories
+#+AUTHOR: Wouter Beek
+
+With Data Stories you can write an HTML article that is interspersed
+with SPARQL results.
+
+* Installing an HTTP server
+
+In order to run Data-Stories locally, you need to run an HTTP server.
+There are many HTTP servers out there.  Here we give a specific
+example, but you can use any HTTP server you like:
+
+#+BEGIN_SRC sh
+sudo apt install nodejs # On Debian-based distro's (e.g., Ubuntu).
+sudo dnf install nodejs # On Red Hat-based distro's (e.g., Fedora).
+sudo npm install http-server -g
+#+END_SRC
+
+* Creating a Data Story
+
+A minimal Data Story consists of 4 files: ~index.html~, ~query.rq~,
+and the dependencies ~yasgui.min.css~ and ~yasgui.min.js~.
+
+** Copy the dependencies
+
+Create a directory for your Data Story, and copy the two dependencies
+[[https://github.com/wouterbeek/Data-Stories/blob/master/deps/yasgui.min.css][~yasgui.min.css~]] and [[https://github.com/wouterbeek/Data-Stories/blob/master/deps/yasgui.min.js][~yasgui.min.js~]] into that directory.
+
+** Creating the HTML file
+
+Create a file named ~index.html~ in the same directory.  In this file
+you can use regular HTML 5 tags in order to tell your story.  A
+minimal HTML file looks as follows:
+
+#+BEGIN_SRC html
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="yasgui.min.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <h1 class="header">Example Data Story</h1>
+    <p>This is where I tell my story.</p>
+    <div data-query data-query-sparql="query.rq"></div>
+    <script src="yasgui.min.js?v=1"></script>
+    <script type="text/javascript">YASGUI.sparqlStories();</script>
+  </body>
+</html>
+#+END_SRC
+
+** Creating the query file
+
+Create a file named ~query.rq~ in the same directory.  This file must
+contain a regular SPARQL query.  A minimal query looks as follows:
+
+#+BEGIN_SRC sparql
+select * {
+  ?s ?p ?o .
+}
+limit 1
+#+END_SRC
+
+* Running Data Stories
+
+Start ~http-server~ in the directory that contains your Data Story:
+
+#+BEGIN_SRC sh
+http-server .
+#+END_SRC
+
+Open http://localhost:3020 in a web browser to view and interact with
+your Data Story.
+
+If all went well you will now see the following in your web browser:
+
+[[https://github.com/wouterbeek/Data-Stories/blob/master/img/simple-data-story.png]]
+
+Please open an issue in the issue tracket in case the above does not
+work.
