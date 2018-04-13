@@ -76,5 +76,5 @@ If all went well you will now see the following in your web browser:
 
 [[https://github.com/wouterbeek/Data-Stories/blob/master/img/simple-data-story.png]]
 
-Please open an issue in the issue tracket in case the above does not
+Please [[https://github.com/wouterbeek/Data-Stories/issues][open an issue in the issue tracker]] in case the above does not
 work.
